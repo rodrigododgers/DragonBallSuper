@@ -50,6 +50,7 @@ exports.update = function(id, newUser, callback){
             user.fullname = newUser.fullname ? newUser.fullname : user.fullname;
             user.email = newUser.email ? newUser.email : user.email;
             user.username = newUser.username ? newUser.username : user.username;
+            //criptografar a senha!
             user.password = newUser.password ? newUser.password : user.password;
             user.save(function(error, user){
                 if(error)
